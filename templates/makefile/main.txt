@@ -1,0 +1,21 @@
+$ ./gnob -help ## Listing Targets
+Usage: gnob [-help] [target]
+Targets:
+* default   default target
+  task1     Task1
+  task2     Task2
+  task3     Task3
+
+* (default target)
+
+$ ./gnob -help default ## Help on Target 'default'
+gnob default:
+
+default target
+This is the default target
+
+$ ./gnob default ## Run 'default'
+Task #1
+Task #2
+Task #3
+Default Target

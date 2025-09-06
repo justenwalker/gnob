@@ -1,0 +1,41 @@
+{
+  "msg": "hello world",
+  "status": "success",
+  "code": 200,
+  "active": true,
+  "count": 42,
+  "temperature": 23.5,
+  "tags": ["example", "json", "buffer"],
+  "user": {
+    "id": 1001,
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+  },
+  "metadata": {
+    "created_at": "2025-09-07T10:30:00Z",
+    "version": "1.0.0",
+    "debug": false
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "First Item",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Second Item", 
+      "completed": true
+    }
+  ],
+  "config": {
+    "timeout": 5000,
+    "retries": 3,
+    "endpoints": {
+      "api": "https://api.example.com",
+      "auth": "https://auth.example.com"
+    }
+  },
+  "empty_array": [],
+  "null_value": null
+}
