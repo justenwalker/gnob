@@ -32,6 +32,9 @@ func main() {
 			Name:     "gnob.go",
 			UpToDate: makefile.FileUpToDate("gnob.go", "internal/gnoblib/*.go"),
 			Body: func(ctx context.Context, mf *GnobMakefile) error {
+				if err := mf.Depend(ctx, "internal/gnoblib/a.go"); err != nil {
+					return err
+				}
 				logger.Info("Building gnob.go")
 				if err := cmd.Exec(ctx, "go", "tool", "golang.org/x/tools/cmd/bundle",
 					"-o", "gnob.go",
@@ -76,9 +79,6 @@ func main() {
 				"templates/usage/*",
 			),
 			Body: func(ctx context.Context, mf *GnobMakefile) error {
-				if err := mf.Depend(ctx, "gnob.go"); err != nil {
-					return err
-				}
 				logger.Info("Building README.md")
 				templates := []string{
 					filepath.Join("templates", "cmdpipe"),

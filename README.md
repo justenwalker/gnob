@@ -75,7 +75,7 @@ func main() {
 
 ```
 
-The `GnobLib.Main.GoRebuildYourself` function will rebuild your project if any of the files matching source files are newer than the `gnob` binary.
+The `GnobLib.Main.GoRebuildYourself` function will rebuild your project if any of the files matching source are newer than the `gnob` binary.
 
 To bootstrap the gnob binary, run
 
